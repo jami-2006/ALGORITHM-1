@@ -1,0 +1,18 @@
+#include <stdio.h>
+/*by simple combinatorics you can get that sum of rest of two element flags should be greater than the third flag number-1, as arrange the maximum numbered flags first and then just you have to arrange rest of flags in the spaces between first colour*/
+int main(void) {
+    int t;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++){
+        int a,b,c;
+        scanf("%d %d %d",&a,&b,&c);
+        int m;
+        if((a+b)>=(c-1)&&(b+c)>=(a-1)&&(c+a)>=(b-1)){
+            printf("YES\n");
+        }
+        else{
+            printf("NO\n");
+        }
+    }
+
+}
