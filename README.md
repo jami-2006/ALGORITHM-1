@@ -1,3 +1,4 @@
+1.1 and 1.2 and 1.3 are cpompletely solved
 1.4 was though not much tough but I still have tried to provide a solution which did pass 4 test cases but failed in 1 and since it took quite long time to code it I didn't have any time left to remove the error. 1.5 I have tried to solve using brute force since I don't know graphing. But it has exceeded time limit for some cases.
 
 PROBLEM 2
