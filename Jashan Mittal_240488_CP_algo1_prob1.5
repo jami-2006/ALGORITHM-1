@@ -1,0 +1,44 @@
+#include <stdio.h>
+/*I have purely used only brute force to solve this problem and no graphing due to which some test cases didn't pass due to time complexity but i think my logic is accurate. my logic is that u approach the problem from backwards. say one has to go from x to y and x<y. then one should find  that  what is the least value that you can reach from that y. let's say that the pont is a. update the value of y to a. and now keep on repeating the process till you reach x. the number of steps taken via this way will be minimum.since if there is a path connecting b and c+1 there is definitely a path connecting b and c. you cannot start from x as for eg. you may go 1 to 5 to 6 to 7 but there may be a path 1 to 2 to 7.*/
+int main()
+{
+    int u;
+    scanf("%d",&u);
+    for(int i=0;i<u;i++){
+        int n,q;
+        scanf("%d %d",&n,&q);
+        int arr[n];
+        for(int j=0;j<n;j++){
+            scanf("%d",&arr[j]);
+        }
+        for(int k=1;k<=q;k++){
+            int a,b;
+            scanf("%d %d",&a,&b);
+            a=a-1;
+            b=b-1;
+            int r=0;
+            while(b>a){
+                r=r+1;
+                int z=b-1;
+                int val=b;
+                while(z>=a){
+                    int step=z+arr[z];
+                    if(step>=b){
+                        val=z;
+                    }
+                    z=z-1;
+                }
+                if(val==b){
+                    b=a;
+                    r=-1;
+                }
+                else{
+                    b=val;
+                }
+            }
+            printf("%d\n",r);
+        }
+    }
+
+    return 0;
+}
