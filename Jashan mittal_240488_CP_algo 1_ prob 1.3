@@ -1,0 +1,18 @@
+#include <stdio.h>
+/*simple logic used in this question is that if you have n number of people replying only positive or negative and say that you are sure that more than half are surely speaking the truth then you can determine the truth just by analysing which party has most 
+    number of responses,that will be the truth. that"s why it is necessary that is in worst case if you talk to all the m type people then there are at least 2*m=1 people you are talking to so that truth speaking people form an absolute majority.*/
+int main(void) {
+    int t;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++){
+        int n,m;
+        scanf("%d %d",&n,&m);
+        if(n<=m){
+            printf("-1\n");
+        }
+        else{
+            printf("%d\n",2*m+1);
+        }
+    }
+
+}
